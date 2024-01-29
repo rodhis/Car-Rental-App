@@ -1,0 +1,14 @@
+:root {
+  --primary-gold: #fba403;
+  --primary-white: #fff;
+  --background: #242424;
+}
+
+body {
+  background-color: var(--background);
+}
+
+a {
+  color: var(--primary-white);
+  text-decoration: none;
+}

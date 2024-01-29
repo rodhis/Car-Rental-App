@@ -1,4 +1,4 @@
-import logo from "../../assets/img/logo.svg";
+import logo from "../../assets/img/logo-gold.svg";
 import notification from "../../assets/img/notification.svg";
 import userAvatar from "../../assets/img/user-avatar.svg";
 
