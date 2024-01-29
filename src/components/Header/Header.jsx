@@ -7,8 +7,9 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <header className={styles.header}>
-      <img src={logo} alt="Logo" className={styles.logoImg} />
-
+      <a href="/">
+        <img src={logo} alt="Logo" className={styles.logoImg} href="/" />
+      </a>
       <ul className={styles.nav}>
         <li>
           <a href="/">Home</a>

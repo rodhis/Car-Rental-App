@@ -24,12 +24,20 @@
   margin-right: 1.5em;
 }
 
+.footerMenu {
+  display: flex;
+  gap: 5em;
+}
+
 .footerMenu h1 {
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
+  margin-bottom: 1.5em;
 }
 
-.footerMenu p {
-  margin: 12px;
+.footerMenu div a {
+  margin: 16px;
+  flex-direction: column;
+  display: flex;
 }

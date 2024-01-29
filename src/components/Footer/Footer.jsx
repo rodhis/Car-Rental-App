@@ -18,11 +18,26 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.footerMenu}>
-        <h1>Company</h1>
-        <p>About Us</p>
-        <p>News</p>
-        <p>Career</p>
-        <p>How we Work</p>
+        <div>
+          <h1>Company</h1>
+          <a href="">About Us</a>
+          <a href="">News</a>
+          <a href="">Career</a>
+          <a href="">How we Work</a>
+        </div>
+        <div>
+          <h1>Support</h1>
+          <a href="">FAQ</a>
+          <a href="">US Office</a>
+          <a href="">Asia Office</a>
+          <a href="">Help Center</a>
+        </div>
+        <div>
+          <h1>More</h1>
+          <a href="">Become a Partner</a>
+          <a href="">Partnet Support</a>
+          <a href="">Mobile app links</a>
+        </div>
       </div>
     </footer>
   );
