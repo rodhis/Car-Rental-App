@@ -1,6 +1,7 @@
 :root {
   --primary-gold: #fba403;
   --primary-white: #fff;
+  --secondary-gray: #b3b3b3;
   --background: #242424;
 }
 
@@ -9,7 +10,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a {
+a,
+p,
+h1 {
   color: var(--primary-white);
   text-decoration: none;
 }
