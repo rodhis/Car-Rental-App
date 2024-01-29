@@ -26,7 +26,7 @@ export default function Header() {
           <a href="/">Contact Us</a>
         </li>
       </ul>
-      <div>
+      <div className={styles.icons}>
         <img src={notification} alt="notification icon" />
         <img src={userAvatar} alt="user avatar" />
       </div>
