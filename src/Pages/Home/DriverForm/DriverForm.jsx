@@ -1,11 +1,14 @@
-import { TextField, ThemeProvider } from "@mui/material";
+import { Switch, TextField, ThemeProvider } from "@mui/material";
 
 import formImage from "../../../assets/img/form-image.svg";
 
 import styles from "./DriverForm.module.css";
 import { driverFormTheme } from "./driverFormTheme.js";
+import { useState } from "react";
 
 export default function DriverForm() {
+  const [country, setCountry] = useState(0);
+
   return (
     <>
       <div className={styles.formHeader}>
@@ -38,10 +41,15 @@ export default function DriverForm() {
             className={styles.TextField}
             fullWidth
             select
+            IconProps={{ style: { fill: driverFormTheme.palette.icon.main } }}
             id="country"
             variant="outlined"
             label="Country"
-          />
+            value={country}
+          >
+            <option value={0}>{"selecione uma opção"}</option>
+          </TextField>
+
           <TextField
             className={styles.TextField}
             fullWidth
@@ -57,6 +65,11 @@ export default function DriverForm() {
             variant="outlined"
             label="Referral Code"
           />
+
+          <div className={styles.ownCar}>
+            <p>I drive my own car</p>
+            <Switch color="warning" />
+          </div>
         </ThemeProvider>
       </div>
     </>

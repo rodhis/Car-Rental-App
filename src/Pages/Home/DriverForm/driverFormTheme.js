@@ -18,6 +18,9 @@ export const driverFormTheme = createTheme({
       default: "#242424",
       paper: "#282828",
     },
+    icon: {
+      main: "#FFF",
+    },
   },
   components: {
     MuiTextField: {
@@ -33,6 +36,9 @@ export const driverFormTheme = createTheme({
 
           "& .MuiOutlinedInput-root:hover": {
             borderColor: "#ffffff",
+          },
+          "& .MuiSelect-icon": {
+            color: "#FFF",
           },
         },
         underline: {
