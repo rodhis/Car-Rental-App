@@ -1,0 +1,29 @@
+@import "../../../index.css";
+
+.formHeader {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+.formHeader img {
+  max-width: 100%;
+}
+
+.formHeader h1 {
+  font-size: 27px;
+  color: var(--primary-gold);
+}
+
+.formHeader p {
+  font-size: 16px;
+  color: var(--primary-white);
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}

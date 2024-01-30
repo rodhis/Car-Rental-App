@@ -11,8 +11,7 @@ body {
 }
 
 a,
-p,
-h1 {
+p {
   color: var(--primary-white);
   text-decoration: none;
 }
