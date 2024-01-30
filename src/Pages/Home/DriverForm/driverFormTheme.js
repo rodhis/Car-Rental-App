@@ -44,7 +44,6 @@ export const driverFormTheme = createTheme({
         underline: {
           "&:before": {
             borderBottom: "#FFF",
-            // hehe
           },
         },
       },
@@ -60,7 +59,6 @@ export const driverFormTheme = createTheme({
           flex: "1 0 0",
           borderRadius: 4,
           border: "1px solid #FFF",
-          // width: "1vw",
           paddingTop: 20,
           margin: 10,
         },

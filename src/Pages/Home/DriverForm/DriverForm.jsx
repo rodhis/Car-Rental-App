@@ -59,7 +59,7 @@ export default function DriverForm() {
             label="Country"
             value={country}
           >
-            <option value={0}>{"selecione uma opção"}</option>
+            <option value={0}>{""}</option>
           </TextField>
 
           <TextField

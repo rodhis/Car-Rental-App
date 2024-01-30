@@ -15,3 +15,7 @@ p {
   color: var(--primary-white);
   text-decoration: none;
 }
+
+option {
+  text-align: left;
+}
