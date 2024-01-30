@@ -21,32 +21,41 @@ export default function DriverForm() {
       <div className={styles.formBody}>
         <ThemeProvider theme={driverFormTheme}>
           <TextField
+            className={styles.TextField}
             fullWidth
-            id="outlined-basic"
+            id="full-name"
             variant="outlined"
-            defaultValue="Full Name"
+            label="Full Name"
           />
           <TextField
+            className={styles.TextField}
             fullWidth
-            id="outlined-basic"
+            id="email"
             variant="outlined"
-            defaultValue="Full Name"
+            label="Email Address"
           />
           <TextField
+            className={styles.TextField}
             fullWidth
-            id="outlined-basic"
+            select
+            id="country"
             variant="outlined"
-            defaultValue="Full Name"
+            label="Country"
           />
           <TextField
-            id="outlined-basic"
+            className={styles.TextField}
+            fullWidth
+            select
+            id="city"
             variant="outlined"
-            defaultValue="Full Name"
+            label="City"
           />
           <TextField
-            id="outlined-basic"
+            className={styles.TextField}
+            fullWidth
+            id="referral-code"
             variant="outlined"
-            defaultValue="Full Name"
+            label="Referral Code"
           />
         </ThemeProvider>
       </div>

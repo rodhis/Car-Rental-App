@@ -30,5 +30,11 @@
 
 .formBody {
   display: flex;
+  flex-direction: column;
+  margin: 2em;
   border-color: var(--primary-white);
+}
+
+.formBody .TextField {
+  margin: 1em;
 }
