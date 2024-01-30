@@ -27,3 +27,8 @@
   align-items: flex-start;
   gap: 1em;
 }
+
+.formBody {
+  display: flex;
+  border-color: var(--primary-white);
+}
