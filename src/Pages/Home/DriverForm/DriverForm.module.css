@@ -10,9 +10,11 @@
   max-width: 100%;
 }
 
-.formHeader h1 {
+.formHeader h1,
+.carType h1 {
   font-size: 27px;
   color: var(--primary-gold);
+  margin-left: -5px;
 }
 
 .formHeader p {
@@ -44,4 +46,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 1em;
+}
+
+.carType {
+  text-align: left;
+  margin: 1em;
+}
+
+.cards {
+  display: flex;
+  width: 38.75rem;
+  margin-left: 1px;
 }

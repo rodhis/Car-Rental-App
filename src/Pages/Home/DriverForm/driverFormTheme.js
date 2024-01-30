@@ -49,5 +49,40 @@ export const driverFormTheme = createTheme({
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          height: 80,
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          flex: "1 0 0",
+          borderRadius: 4,
+          border: "1px solid #FFF",
+          // width: "1vw",
+          paddingTop: 20,
+          margin: 10,
+        },
+      },
+    },
+    MuiCardMedia: {
+      styleOverrides: {
+        img: {
+          width: 52,
+          gap: 5,
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          width: "12.5rem",
+          height: "3.5rem",
+          marginTop: "1rem",
+          marginLeft: 10,
+        },
+      },
+    },
   },
 });
