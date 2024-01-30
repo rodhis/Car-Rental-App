@@ -1,8 +1,9 @@
-import { TextField } from "@mui/material";
+import { TextField, ThemeProvider } from "@mui/material";
 
 import formImage from "../../../assets/img/form-image.svg";
 
 import styles from "./DriverForm.module.css";
+import { driverFormTheme } from "./driverFormTheme.js";
 
 export default function DriverForm() {
   return (
@@ -18,12 +19,36 @@ export default function DriverForm() {
         </div>
       </div>
       <div className={styles.formBody}>
-        <TextField
-          id="outlined-basic"
-          label="Outlined"
-          variant="outlined"
-          defaultValue="Hello World"
-        />
+        <ThemeProvider theme={driverFormTheme}>
+          <TextField
+            fullWidth
+            id="outlined-basic"
+            variant="outlined"
+            defaultValue="Full Name"
+          />
+          <TextField
+            fullWidth
+            id="outlined-basic"
+            variant="outlined"
+            defaultValue="Full Name"
+          />
+          <TextField
+            fullWidth
+            id="outlined-basic"
+            variant="outlined"
+            defaultValue="Full Name"
+          />
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            defaultValue="Full Name"
+          />
+          <TextField
+            id="outlined-basic"
+            variant="outlined"
+            defaultValue="Full Name"
+          />
+        </ThemeProvider>
       </div>
     </>
   );
