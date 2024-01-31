@@ -15,7 +15,7 @@ export const driverFormTheme = createTheme({
       disabled: "#b3b3b3",
     },
     background: {
-      default: "#242424",
+      default: "#2C2C2C",
       paper: "#282828",
     },
     icon: {
