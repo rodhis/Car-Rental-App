@@ -66,8 +66,8 @@ export const driverFormTheme = createTheme({
     },
     MuiCardMedia: {
       styleOverrides: {
-        img: {
-          width: 52,
+        svg: {
+          width: 20,
           gap: 5,
         },
       },

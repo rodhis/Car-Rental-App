@@ -15,6 +15,7 @@
   font-size: 27px;
   color: var(--primary-gold);
   margin-left: -5px;
+  margin-bottom: 1rem;
 }
 
 .formHeader p {
@@ -57,4 +58,50 @@
   display: flex;
   width: 38.75rem;
   margin-left: 1px;
+}
+
+.carRadio {
+  position: absolute;
+  left: -9999px;
+}
+
+.carRadioLabel {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  width: 147px;
+  height: 80px;
+  margin: 0.5rem;
+  border: 1px solid var(--primary-white);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div svg path {
+  fill: var(--primary-gold);
+}
+
+div span {
+  display: block;
+  color: var(--primary-white);
+}
+
+div input:checked + label {
+  background-color: var(--background);
+  border: 1px solid var(--primary-gold);
+}
+
+div input:checked + label svg path {
+  fill: var(--primary-white);
+}
+
+div input:checked + label span {
+  color: var(--primary-white);
+}
+
+div input:focus + label {
+  outline: 4px solid var(--primary-gold);
+  outline-offset: 2px;
 }
