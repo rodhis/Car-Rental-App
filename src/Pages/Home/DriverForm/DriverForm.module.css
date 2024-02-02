@@ -24,7 +24,6 @@
   margin-bottom: 1rem;
 }
 
-
 .formHeader p {
   font-size: 16px;
   color: var(--primary-white);
@@ -99,21 +98,16 @@ div span {
 }
 
 div input:checked + label {
-  background-color: var(--background);
-  border: 1px solid var(--primary-gold);
+  background-color: var(--primary-gold);
+  border: 1px solid var(--secondary-background);
 }
 
 div input:checked + label svg path {
-  fill: var(--primary-white);
+  fill: var(--secondary-background);
 }
 
 div input:checked + label span {
-  color: var(--primary-white);
-}
-
-div input:focus + label {
-  outline: 4px solid var(--primary-gold);
-  outline-offset: 2px;
+  color: var(--background);
 }
 
 input:-webkit-autofill {
