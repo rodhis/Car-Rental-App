@@ -48,6 +48,11 @@
   margin: 1em;
 }
 
+.formSelect {
+  margin: 1rem;
+  display: inline-block;
+}
+
 .ownCar {
   display: flex;
   align-items: center;

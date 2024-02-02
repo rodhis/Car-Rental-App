@@ -1,3 +1,14 @@
 {
-  "registered-drivers": []
+  "registered-drivers": [
+    {
+      "name": "Rodrigo N Oliveira",
+      "email": "rodrigonoliva@gmail.com",
+      "referral": "aaa-001",
+      "ownCar": false,
+      "country": "Barbados",
+      "city": "Pine Housing Estate",
+      "carType": "Car type not selected",
+      "id": 2
+    }
+  ]
 }

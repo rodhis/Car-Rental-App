@@ -66,7 +66,7 @@ export default function SuccessForm() {
             <h2>
               Has own car?{" "}
               <span className={styles.successData}>
-                {data.ownCar ? data.cartype : "No"}
+                {data.ownCar ? data.carType : "No"}
               </span>
             </h2>
           </div>

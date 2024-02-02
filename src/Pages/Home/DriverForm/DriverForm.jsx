@@ -104,7 +104,6 @@ export default function DriverForm() {
               label="Email Address"
               {...register("email")}
               error={errors.email ? true : false}
-              helperText={errors?.email && errors.email.message}
             />
             <FormControl>
               <InputLabel>Country</InputLabel>
@@ -113,7 +112,7 @@ export default function DriverForm() {
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className={styles.TextField}
+                    className={styles.formSelect}
                     fullWidth
                     id="country"
                     variant="outlined"
@@ -124,7 +123,6 @@ export default function DriverForm() {
                       field.onChange(ev);
                     }}
                     error={errors.country ? true : false}
-                    helperText={errors?.country && errors.country.message}
                   >
                     {countries.map((country, index) => (
                       <MenuItem key={index} value={country}>
@@ -134,6 +132,9 @@ export default function DriverForm() {
                   </Select>
                 )}
               />
+              {errors.country && (
+                <FormHelperText error>{errors.country.message}</FormHelperText>
+              )}
             </FormControl>
 
             <FormControl>
@@ -143,7 +144,7 @@ export default function DriverForm() {
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className={styles.TextField}
+                    className={styles.formSelect}
                     fullWidth
                     id="city"
                     variant="outlined"
@@ -154,7 +155,6 @@ export default function DriverForm() {
                       field.onChange(ev);
                     }}
                     error={errors.city ? true : false}
-                    helperText={errors?.city && errors.city.message}
                   >
                     {cities.map((city, index) => (
                       <MenuItem key={index} value={city}>
@@ -164,6 +164,9 @@ export default function DriverForm() {
                   </Select>
                 )}
               />
+              {errors.city && (
+                <FormHelperText error>{errors.city.message}</FormHelperText>
+              )}
             </FormControl>
 
             <TextField
@@ -179,7 +182,12 @@ export default function DriverForm() {
 
             <div className={styles.ownCar}>
               <p>I drive my own car</p>
-              <Switch color="warning" {...register("ownCar")} />
+              <Switch
+                color="warning"
+                name="own-car"
+                {...register("ownCar")}
+                aria-label="I drive my own car"
+              />
             </div>
             {watchOwnCar && (
               <div className={styles.carType}>
