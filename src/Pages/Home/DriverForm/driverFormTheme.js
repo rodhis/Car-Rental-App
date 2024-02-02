@@ -37,14 +37,39 @@ export const driverFormTheme = createTheme({
           "& .MuiOutlinedInput-root:hover": {
             borderColor: "#ffffff",
           },
+        },
+        underline: {
+          "&:before": {
+            borderBottom: "#FFF",
+          },
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          "& .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#ffffff",
+          },
+
+          "& .MuiInputBase-input": {
+            color: "#ffffff",
+          },
+
+          "& .MuiOutlinedInput-root:hover": {
+            borderColor: "#ffffff",
+          },
           "& .MuiSelect-icon": {
-            color: "#FFF",
+            color: "#FFFFFF",
           },
         },
         underline: {
           "&:before": {
             borderBottom: "#FFF",
           },
+        },
+        icon: {
+          color: "#FFF",
         },
       },
     },

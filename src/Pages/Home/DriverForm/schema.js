@@ -25,10 +25,13 @@ const schema = yup.object({
       /^[A-Za-z]{3}-\d{3}$/,
       "Referral code format must be 3 letters, one dash and 5 numbers; E.g.: AAA-0001."
     ),
-    carType: yup
-    .string()
-    .required("a")
-    
+  ownCar: yup.boolean().transform((originalValue) => originalValue || false),
+
+  carType: yup.string().when("ownCar", {
+    is: true,
+    then: (schema) => schema.required("Select a vehicle type."),
+    otherwise: (schema) => schema.notRequired(),
+  }),
 });
 
 export default schema;

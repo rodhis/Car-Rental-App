@@ -7,6 +7,7 @@ import {
   Select,
   FormControl,
   InputLabel,
+  FormHelperText,
 } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -36,10 +37,10 @@ export default function DriverForm() {
   const [city, setCity] = useState("");
   const [cities, setCities] = useState([]);
   const [country, setCountry] = useState("");
-  const [myCar, setMyCar] = useState(false);
 
   const countries = Object.keys(countriesAndCities);
   const watchCountry = watch("country", "");
+  const watchOwnCar = watch("ownCar");
 
   useEffect(() => {
     if (watchCountry) {
@@ -48,6 +49,9 @@ export default function DriverForm() {
   }, [watchCountry, countriesAndCities]);
 
   function onSubmit(data) {
+    if (!watchOwnCar) {
+      data.carType = "Car type not selected";
+    }
     console.log(data);
   }
 
@@ -80,6 +84,8 @@ export default function DriverForm() {
               id="full-name"
               variant="outlined"
               label="Full Name"
+              error={errors.name ? true : false}
+              helperText={errors?.name && errors.name.message}
               {...register("name")}
             />
             <TextField
@@ -89,6 +95,8 @@ export default function DriverForm() {
               variant="outlined"
               label="Email Address"
               {...register("email")}
+              error={errors.email ? true : false}
+              helperText={errors?.email && errors.email.message}
             />
             <FormControl>
               <InputLabel>Country</InputLabel>
@@ -107,6 +115,8 @@ export default function DriverForm() {
                       handleOnChangeCountry(ev);
                       field.onChange(ev);
                     }}
+                    error={errors.country ? true : false}
+                    helperText={errors?.country && errors.country.message}
                   >
                     {countries.map((country, index) => (
                       <MenuItem key={index} value={country}>
@@ -135,6 +145,8 @@ export default function DriverForm() {
                       handleOnChangeCity(ev);
                       field.onChange(ev);
                     }}
+                    error={errors.city ? true : false}
+                    helperText={errors?.city && errors.city.message}
                   >
                     {cities.map((city, index) => (
                       <MenuItem key={index} value={city}>
@@ -153,13 +165,15 @@ export default function DriverForm() {
               variant="outlined"
               label="Referral Code"
               {...register("referral")}
+              error={errors.referral ? true : false}
+              helperText={errors?.referral && errors.referral.message}
             />
 
             <div className={styles.ownCar}>
               <p>I drive my own car</p>
-              <Switch color="warning" onChange={() => setMyCar(!myCar)} />
+              <Switch color="warning" {...register("ownCar")} />
             </div>
-            {myCar && (
+            {watchOwnCar && (
               <div className={styles.carType}>
                 <h1>Select your car type</h1>
 
@@ -262,6 +276,11 @@ export default function DriverForm() {
                     </label>
                   </div>
                 </div>
+                {errors.carType && (
+                  <FormHelperText error>
+                    {errors.carType.message}
+                  </FormHelperText>
+                )}
               </div>
             )}
             <Button variant="contained" type="submit">
