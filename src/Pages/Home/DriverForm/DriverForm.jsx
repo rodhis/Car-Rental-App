@@ -102,8 +102,9 @@ export default function DriverForm() {
               id="email"
               variant="outlined"
               label="Email Address"
-              {...register("email")}
               error={errors.email ? true : false}
+              helperText={errors?.email && errors.email.message}
+              {...register("email")}
             />
             <FormControl className={styles.formSelect}>
               <InputLabel id="country">Country</InputLabel>
@@ -144,7 +145,6 @@ export default function DriverForm() {
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className={styles.selectColors}
                     fullWidth
                     labelId="city"
                     id="city"
