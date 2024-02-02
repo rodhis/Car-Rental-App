@@ -111,3 +111,8 @@ div input:focus + label {
   outline: 4px solid var(--primary-gold);
   outline-offset: 2px;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #2c2c2c inset;
+  -webkit-text-fill-color: var(--primary-white);
+}

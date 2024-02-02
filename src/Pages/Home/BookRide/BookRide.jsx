@@ -24,26 +24,19 @@ export default function BookRide() {
             <p className={styles.findMyRideText}>Find a Ride Now</p>
             <TextField
               fullWidth
-              IconProps={{ style: { fill: bookRideTheme.palette.icon.main } }}
               id="location"
               variant="outlined"
               label="Your Pickup"
               value={location}
-            >
-              <option value={0}>{""}</option>
-            </TextField>
+            ></TextField>
             <TextField
               fullWidth
-              IconProps={{ style: { fill: bookRideTheme.palette.icon.main } }}
               id="destination"
               variant="outlined"
               label="Your Destination"
               value={destination}
-            >
-              <option value={0}>{""}</option>
-            </TextField>
+            ></TextField>
             <Button variant="contained" startIcon={<SearchIcon />}>
-              {" "}
               FIND A DRIVER
             </Button>
           </Container>
