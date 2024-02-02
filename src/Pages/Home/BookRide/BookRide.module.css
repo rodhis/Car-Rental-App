@@ -24,6 +24,7 @@
 }
 
 .bookRide h1 span {
+  display: inline-block;
   color: var(--primary-gold);
 }
 

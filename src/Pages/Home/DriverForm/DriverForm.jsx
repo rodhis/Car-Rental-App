@@ -60,7 +60,7 @@ export default function DriverForm() {
   }
 
   return (
-    <>
+    <div className={styles.myRide}>
       <div className={styles.formHeader}>
         <img src={formImage} alt="driver form car image" />
         <div className={styles.headerText}>
@@ -270,6 +270,6 @@ export default function DriverForm() {
           </ThemeProvider>
         </div>
       </form>
-    </>
+    </div>
   );
 }
