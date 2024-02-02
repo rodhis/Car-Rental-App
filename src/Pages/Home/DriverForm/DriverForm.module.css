@@ -24,6 +24,10 @@
   margin-bottom: 1rem;
 }
 
+.selectColors svg {
+  color: white !important;
+}
+
 .formHeader p {
   font-size: 16px;
   color: var(--primary-white);
@@ -40,20 +44,18 @@
 .formBody {
   display: flex;
   flex-direction: column;
-  margin: 2em;
+  gap: 2rem;
   border-color: var(--primary-white);
-}
-
-.formBody .TextField {
-  margin: 1em;
+  align-items: center;
 }
 
 .formSelect {
-  margin: 1rem;
-  display: inline-block;
+  display: flex;
+  width: 100%;
 }
 
 .ownCar {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -91,7 +93,7 @@
 }
 
 div svg path {
-  fill: var(--primary-gold);
+  fill: var(--primary-white);
 }
 
 div span {

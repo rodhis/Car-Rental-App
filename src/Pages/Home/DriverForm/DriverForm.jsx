@@ -105,15 +105,15 @@ export default function DriverForm() {
               {...register("email")}
               error={errors.email ? true : false}
             />
-            <FormControl>
-              <InputLabel>Country</InputLabel>
+            <FormControl className={styles.formSelect}>
+              <InputLabel id="country">Country</InputLabel>
               <Controller
                 name="country"
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className={styles.formSelect}
                     fullWidth
+                    labelId="country"
                     id="country"
                     variant="outlined"
                     label="Country"
@@ -137,15 +137,16 @@ export default function DriverForm() {
               )}
             </FormControl>
 
-            <FormControl>
-              <InputLabel>City</InputLabel>
+            <FormControl className={styles.formSelect}>
+              <InputLabel id="city">City</InputLabel>
               <Controller
                 name="city"
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className={styles.formSelect}
+                    className={styles.selectColors}
                     fullWidth
+                    labelId="city"
                     id="city"
                     variant="outlined"
                     label="City"
@@ -182,11 +183,12 @@ export default function DriverForm() {
 
             <div className={styles.ownCar}>
               <p>I drive my own car</p>
+
               <Switch
                 color="warning"
                 name="own-car"
                 {...register("ownCar")}
-                aria-label="I drive my own car"
+                inputProps={{ "aria-label": "Size switch demo" }}
               />
             </div>
             {watchOwnCar && (

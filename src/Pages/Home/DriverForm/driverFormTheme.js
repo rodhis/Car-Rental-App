@@ -52,6 +52,10 @@ export const driverFormTheme = createTheme({
             borderColor: "#ffffff",
           },
 
+          svg: {
+            color: "#ffffff !important",
+          },
+
           "& .MuiInputBase-input": {
             color: "#ffffff",
           },
