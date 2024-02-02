@@ -21,6 +21,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Controller, useForm } from "react-hook-form";
 import schema from "./schema.js";
+import { useDispatch } from "react-redux";
+import { setSuccess } from "../../../store/driver-slice.js";
 
 export default function DriverForm() {
   const {
@@ -42,6 +44,8 @@ export default function DriverForm() {
   const watchCountry = watch("country", "");
   const watchOwnCar = watch("ownCar");
 
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (watchCountry) {
       setCities(countriesAndCities[watchCountry]);
@@ -52,7 +56,11 @@ export default function DriverForm() {
     if (!watchOwnCar) {
       data.carType = "Car type not selected";
     }
-    console.log(data);
+    axios
+      .post("http://localhost:3000/registered-drivers", { ...data })
+      .then((response) => {
+        dispatch(setSuccess(true));
+      });
   }
 
   function handleOnChangeCity(ev) {
@@ -183,7 +191,7 @@ export default function DriverForm() {
                       type="radio"
                       className={styles.carRadio}
                       id="sedan"
-                      value="sedan"
+                      value="Sedan"
                       {...register("carType")}
                     />
                     <label htmlFor="sedan" className={styles.carRadioLabel}>
@@ -207,7 +215,7 @@ export default function DriverForm() {
                       type="radio"
                       className={styles.carRadio}
                       id="suv"
-                      value="suv"
+                      value="SUV/Van"
                       {...register("carType")}
                     />
                     <label htmlFor="suv" className={styles.carRadioLabel}>
@@ -231,7 +239,7 @@ export default function DriverForm() {
                       type="radio"
                       className={styles.carRadio}
                       id="semilux"
-                      value="semilux"
+                      value="Semi Luxury"
                       {...register("carType")}
                     />
                     <label htmlFor="semilux" className={styles.carRadioLabel}>
@@ -255,7 +263,7 @@ export default function DriverForm() {
                       type="radio"
                       className={styles.carRadio}
                       id="lux"
-                      value="lux"
+                      value="Luxury Car"
                       {...register("carType")}
                     />
                     <label htmlFor="lux" className={styles.carRadioLabel}>
