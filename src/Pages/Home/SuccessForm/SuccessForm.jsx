@@ -42,7 +42,10 @@ export default function SuccessForm() {
           <div className={styles.successText}>
             <img src={successIcon} className={styles.successIcon} />
             <h1>
-              Welcome <span className={styles.successName}>{data.name}</span>
+              Welcome,{" "}
+              <span className={styles.successName}>
+                {data.name.split(" ")[0]}!
+              </span>
             </h1>
           </div>
           <div className={styles.successText}>
