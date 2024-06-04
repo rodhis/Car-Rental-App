@@ -57,7 +57,7 @@ export default function DriverForm() {
       data.carType = "Car type not selected";
     }
     axios
-      .post("http://localhost:3000/registered-drivers", { ...data })
+      .post("http://localhost:3000/registered-drivers", { ...data, id: "1" })
       .then((response) => {
         dispatch(setSuccess(true));
       });

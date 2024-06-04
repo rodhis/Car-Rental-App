@@ -14,9 +14,6 @@ export default function SuccessForm() {
   const [data, setData] = useState();
 
   console.log(data);
-  function onSubmitAnotherCar() {
-    dispatch(setSuccess(false));
-  }
 
   useEffect(() => {
     axios.get("http://localhost:3000/registered-drivers/1").then((response) => {
@@ -25,22 +22,30 @@ export default function SuccessForm() {
     });
   }, []);
 
-  useEffect(() => {
-    if (data) {
-      axios
-        .delete("http://localhost:3000/registered-drivers/1")
-        .then((response) => {
-          console.log(response);
-        });
-    }
-  }, [data]);
+  function onSubmitAnotherCar() {
+    // Aqui, você pode definir uma flag no estado local para indicar se um novo carro foi submetido
+    // e, em seguida, excluir o registro do motorista apenas se essa flag for verdadeira.
+    axios
+      .delete("http://localhost:3000/registered-drivers/1")
+      .then((response) => {
+        console.log(response);
+      });
+
+    // Em seguida, você pode redefinir o estado local de `data` para null para que a tela de sucesso seja ocultada.
+    setData(null);
+    dispatch(setSuccess(false));
+  }
 
   return (
     <>
       {data && (
         <section className={styles.successForm}>
           <div className={styles.successText}>
-            <img src={successIcon} className={styles.successIcon} />
+            <img
+              src={successIcon}
+              className={styles.successIcon}
+              alt="Success Icon"
+            />
             <h1>
               Welcome,{" "}
               <span className={styles.successName}>
