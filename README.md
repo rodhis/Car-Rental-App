@@ -12,7 +12,7 @@ Using this app you can request a car, for various needs, and also register yours
 
 4- Again, on the same terminal, type `npm run dev` to run the Vite (front-end) server;
 
-5- Open a different terminal and type `npm run server` to run json-server (database).
+5- Open a different terminal on the same project folder and type `npm run server` to run json-server (database).
 
 Note that <strong>both Vite and Json-Server must be running in different terminals</strong> for the project to work.
 
