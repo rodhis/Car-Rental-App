@@ -4,6 +4,9 @@ Using this app you can request a car, for various needs, and also register yours
 
 ## Instructions
 
+1- Download the files to a folder
+2- Run ""
+
 You can browse the page as you like. If you wish to know more about a car type, select "Read More" under one of the buttons.
 
 If you wish to register, fill the form on the end of the page following these instructions:
