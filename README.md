@@ -30,7 +30,9 @@ If you wish to register, fill the form on the end of the page following these in
 
 ## Troubleshoot
 
-If you're not getting the confirmation screen, please make sure that <strong>backend/db.json only has a single object</strong> with the key "registered-drivers: []". This is a limitation requested by the Project Owner.
+Make sure that ports 5173 and 3000 are properly fowarded, as you need then to run Vite server and Json-server.
+
+If you cannot run `npm run server`, make sure you isntalled it globally as mentioned in step 3 of install instructions.
 
 ## Info
 
