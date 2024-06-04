@@ -52,15 +52,26 @@ export default function DriverForm() {
     }
   }, [watchCountry, countriesAndCities]);
 
-  function onSubmit(data) {
+  async function onSubmit(data) {
     if (!watchOwnCar) {
       data.carType = "Car type not selected";
     }
-    axios
-      .post("http://localhost:3000/registered-drivers", { ...data, id: "1" })
-      .then((response) => {
-        dispatch(setSuccess(true));
+
+    try {
+      const response = await axios.get(
+        "http://localhost:3000/registered-drivers/"
+      );
+      if (response.data.length > 0) {
+        await axios.delete("http://localhost:3000/registered-drivers/1");
+      }
+      await axios.post("http://localhost:3000/registered-drivers", {
+        ...data,
+        id: "1",
       });
+      dispatch(setSuccess(true));
+    } catch (error) {
+      console.error("Erro ao enviar o formulário:", error);
+    }
   }
 
   function handleOnChangeCity(ev) {
