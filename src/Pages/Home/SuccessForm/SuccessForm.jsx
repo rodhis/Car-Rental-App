@@ -23,15 +23,11 @@ export default function SuccessForm() {
   }, []);
 
   function onSubmitAnotherCar() {
-    // Aqui, você pode definir uma flag no estado local para indicar se um novo carro foi submetido
-    // e, em seguida, excluir o registro do motorista apenas se essa flag for verdadeira.
     axios
       .delete("http://localhost:3000/registered-drivers/1")
       .then((response) => {
         console.log(response);
       });
-
-    // Em seguida, você pode redefinir o estado local de `data` para null para que a tela de sucesso seja ocultada.
     setData(null);
     dispatch(setSuccess(false));
   }
